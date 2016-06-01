@@ -208,71 +208,73 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "onservice",
-    "inrealm",
+    "all",
+    "anti_ads",
+    "anti_bot",
+    "anti_spam",
+    "anti_chat",
+    "banhammer",
+    "boobs",
+    "bot_manager",
+    "botnumber",
+    "broadcast",
+    "calc",
+    "download_media",
+    "feedback",
+    "get",
+    "google",
+    "gps",
     "ingroup",
     "inpm",
-    "banhammer",
-    "stats",
-    "anti_spam",
-    "owners",
-    "arabic_lock",
-    "set",
-    "get",
-    "broadcast",
-    "download_media",
+    "inrealm",
     "invite",
-    "all",
     "leave_ban",
-    "admin"
+    "linkpv",
+    "location",
+    "lock_join",
+    "anti_fosh",
+    "left_group",
+    "owners",
+    "plugins",
+    "set",
+    "spam",
+    "stats",
+    "support",
+    "filterworld",
+    "server_manager",
+    "time",
+    "version"
     },
-    sudo_users = {207118312},--Sudo users
+	    sudo_users = {207118312},--Sudo users
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v2 - Open Source
-An advance Administration bot based on yagop/telegram-bot 
+    about_text = [[
+https://github.com/alijoooon/GoOoZ
 
-https://github.com/SEEDTEAM/TeleSeed
-
-Our team!
-Alphonse (@Iwals)
-I M /-\ N (@Imandaneshi)
-Siyanew (@Siyanew)
-Rondoozle (@Potus)
-Seyedan (@Seyedan25)
-
-Special thanks to:
-Juan Potato
-Siyanew
-Topkecleon
-Vamptacus
-
-Our channels:
-English: @TeleSeedCH
-Persian: @IranSeed
+channel : 
 ]],
     help_text_realm = [[
 Realm Commands:
 
-!creategroup [name]
+!creategroup [Name]
 Create a group
 
-!createrealm [name]
+!createrealm [Name]
 Create a realm
 
-!setname [name]
+!setname [Name]
 Set realm name
 
-!setabout [group_id] [text]
+!setabout [GroupID] [Text]
 Set a group's about text
 
-!setrules [grupo_id] [text]
+!setrules [GroupID] [Text]
 Set a group's rules
 
-!lock [grupo_id] [setting]
+!lock [GroupID] [setting]
 Lock a group's setting
 
-!unlock [grupo_id] [setting]
+!unlock [GroupID] [setting]
 Unock a group's setting
 
 !wholist
@@ -284,10 +286,10 @@ Get a file of members in group/realm
 !type
 Get group type
 
-!kill chat [grupo_id]
+!kill chat [GroupID]
 Kick all memebers and delete group
 
-!kill realm [realm_id]
+!kill realm [RealmID]
 Kick all members and delete realm
 
 !addadmin [id|username]
@@ -303,132 +305,221 @@ Get a list of all groups
 Get a list of all realms
 
 !log
-Get a logfile of current group or realm
+Grt a logfile of current group or realm
 
 !broadcast [text]
 !broadcast Hello !
 Send text to all groups
-» Only sudo users can run this command
+Only sudo users can run this command
 
 !bc [group_id] [text]
 !bc 123456789 Hello !
 This command will send text to [group_id]
 
-» U can use both "/" and "!" 
-
-» Only mods, owner and admin can add bots in group
-
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
-
-» Only owner can use res,setowner,promote,demote and log commands
+ch: @Nod32team
 
 ]],
     help_text = [[
-Commands list :
-
+85 bot
+ 
+1-banhammer list ^
+ 
 !kick [username|id]
-You can also do it by reply
+👿 کونی رو کیک میکنه
 
 !ban [ username|id]
-You can also do it by reply
+👿 کونی رو بن میکنه
 
 !unban [id]
-You can also do it by reply
+👿 کونی رو آن بن میکنه
 
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
+!kickinactive
+👿بیکار هارو سیک میکنه 
 
 !kickme
-Will kick user
+👿خودم سیک میشم بیرون
 
-!about
-Group description
+2-Statistics list ^
 
-!setphoto
-Set and locks group photo
+!who
+👿لیست و ایدی همه کسکشای گروه
 
-!setname [name]
-Set group name
-
-!rules
-Group rules
-
-!id
-Return group id or user id
-
-!help
-Get commands list
-
-!lock [member|name|bots|leave] 
-Locks [member|name|bots|leaveing] 
-
-!unlock [member|name|bots|leave]
-Unlocks [member|name|bots|leaving]
-
-!set rules [text]
-Set [text] as rules
-
-!set about [text]
-Set [text] as about
-
-!settings
-Returns group settings
-
-!newlink
-Create/revoke your group link
-
-!link
-Returns group link
-
-!owner
-Returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
+!all
+👿دریافت اطلاعات این گروه کیری
 
 !stats
-Simple message statistics
+👿امار کلی این گروه کیری
 
-!save [value] [text]
-Save [text] as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-Returns user id
-
-!log
-Will return group logs
+!modlist
+👿لیست مدیر های کسکش این گروه 
 
 !banlist
-Will return group ban list
+👿اعضایی که سیکشون کردیم 
 
-» U can use both "/" and "!" 
+3-Rate Member ^
 
-» Only mods, owner and admin can add bots in group
+!setowner [id]
+👿اضافه کردن یک مدیر کسکش به گپ
 
-» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+!promote [username]
+👿اضافه کردن یک مدیر کونی به گپ
 
-» Only owner can use res,setowner,promote,demote and log commands
+!demote [username]
+👿برکنار کردن همین مدیر کونی 
 
+4-General changes ^
+
+!setname [name]
+👿ایجاد یک اسم کیری برای گپ
+
+!setphoto
+👿ایجاد یک عکس کیری برای گپ
+
+!set rules <text>
+👿ایجاد یک قوانین کسشر برای گپ
+
+!set about <text>
+👿مختصر کسشر برای گپ
+
+!setflood [value]
+👿حساسیت بات به اسپم این کونی ها 
+
+5-View details ^
+
+!about
+👿توضیحات کسشر درباره این گروه کسشر
+
+!rules
+👿یک سری قوانین کیری اضافه کنید
+
+!settings
+👿تنظیمات کیری این گپ
+
+!help
+👿دستورات این بات کیری
+
+6-Security Group ^
+
+!lock member 
+👿قفل کردن ورود اعضای کسکش
+
+!lock join
+👿قفل کردن ورود اعضای جدید  کسکش
+
+!lock name
+👿قفل کردن اسم کیری گپ
+
+!lock chat
+👿قفل کردن چت هیچ کیرخری فک نزنه
+
+!lock ads
+👿قفل کردن تبلیغات هیچ انتری تبلیغ نده
+
+!lock leave
+👿قفل کردن خروج کسی سیک نکنه
+
+!lock fosh
+👿ممنوع کردن فحش کسی فحش بده سیک میشه
+
+!lock chat
+قفل چت ممنوع گروه
+
+!antibot enable 
+👿هیچ ربات کسکشی وارد گپ نشه 
+
+!antibot disable
+👿اجازه ورود ربات های کسکش
+
+!unlock xxxx
+[*name*leave*member]
+[*fosh*ads]
+[chat*join*photo]
+باز کردن دستورات قفل شده
+
+7-Fun time ^
+
+!time country city
+ساعت کشور مورد نظر
+
+!loc country city
+مشخصات کشور و شهر مورد نظر
+
+!google
+سرچ مطلب مورد نظر از گوگل
+ 
+ !gps
+ مکان کشور , شهر مورد نظر تحت گوگل
+ 
+ !calc 3+1
+ انجام محاسبات ریاضی
+
+8-Service Provider ^
+
+!newlink
+👿لینک کیری این گپ رو میسازه 
+
+!link
+👿لینک کیری این گپ رو میده 
+
+!linkpv
+👿اگه شماره این ربات کیری رو داشته باشید لینک رو پی وی شما میده
+
+!invite username
+👿اگه شماره این ربات کیری رو داشته باشید ممبر اضافه میکنه
+
+9-Member Profile and Group ^
+!owner
+👿مدیر کیری گروه
+
+!id
+👿ایدی فرد کسکش
+
+!res [username]
+👿در اوردم ایدی شخص کسکش
+
+!info 
+👿مشخصات این فرد جنده
+
+!settings
+👿تنظیمات این گپ کیری
+
+10-filter word Mode ^
+
+!filter set (word)
+اضافه کردن کلمه جدید به لیست
+
+!filter del (word)
+حذف کلمه از لیست
+
+!filter warn (word)
+اخطار به کلمه فیتر شده
+
+!filterlist
+لیست کلمات فیلتر شده
+
+11-bot number & support ^
+
+!botnumber
+👿شماره این ربات کیری
+
+!support
+👿دعوت سازنده کسخل این بات کیری
+
+!version
+👿ولش کسشره
+
+!feedback (text)
+👿ارسال نظرات کسشر شما به منه کسخل 
+
+you can use both "/" and "!" 
+.شما میتوانید از ! و / استفاده کنید
+
+👿ببین جنده زیاد باهاش ور نرو میکنمت کسکش
+
+
+https://telegram.me/chalesh_zedspem
 ]]
-  }
+   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
 end
